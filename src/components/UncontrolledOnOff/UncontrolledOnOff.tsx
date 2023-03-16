@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 
 export function UncontrolledOnOff() {
-
+    console.log('UncontrolledOnOff rendering')
     const [on, setOn] = useState<boolean>(false)
 
     const onOffFunc = () => {
