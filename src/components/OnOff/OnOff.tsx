@@ -3,11 +3,44 @@ type OnOffPropsType = {
 }
 
 export function OnOff(props: OnOffPropsType) {
+
+    const onOffStyle = {
+        margin: '10px'
+    }
+
+    const onStyle = {
+        display: 'inline-block',
+        height: '20px',
+        width: '30px',
+        padding: '5px',
+        border: '1px solid black',
+        backgroundColor: props.on ? 'green' : 'white'
+    }
+
+    const offStyle = {
+        display: 'inline-block',
+        height: '20px',
+        width: '30px',
+        padding: '5px',
+        border: '1px solid black',
+        backgroundColor: props.on ? 'white' : 'red'
+    }
+
+    const indicatorStyle = {
+        display: 'inline-block',
+        marginLeft: '5px',
+        width: '20px',
+        height: '20px',
+        border: '1px solid black',
+        borderRadius: '10px',
+        backgroundColor: props.on ? 'green' : 'red'
+    }
+
     return (
-        <div className={'onOff'}>
-            <div className={props.on ? 'buttonOnOF on' : 'buttonOnOF' }>On</div>
-            <div className={!props.on ?'buttonOnOF off' : 'buttonOnOF'}>Off</div>
-            <div className={props.on? 'indicator on' : 'indicator off'}></div>
+        <div style={onOffStyle}>
+            <div style={onStyle}>On</div>
+            <div style={offStyle}>Off</div>
+            <div style={indicatorStyle}></div>
         </div>
     )
 }
