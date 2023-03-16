@@ -3,6 +3,7 @@ import './App.css';
 import {Accordion} from './components/Accordion/Accordion';
 import {Rating} from './components/Rating/Rating';
 import {OnOff} from './components/OnOff/OnOff';
+import {UncontrolledOnOff} from './components/OnOff/UncontrolledOnOff';
 
 
 // function declaration
@@ -24,6 +25,8 @@ function App() {
 
             <OnOff on={true}/>
             <OnOff on={false}/>
+
+            <UncontrolledOnOff/>
         </div>
     );
 }
