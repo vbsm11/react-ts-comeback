@@ -15,11 +15,13 @@ function App() {
 
     const [ratingValue, setRatingValue] = useState<ValuesType>(3)
 
+    const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
+
 
     // обязана вернуть JSX
     return (
         <div className={'App'}>
-            <Accordion titleValue={'Users'} collapsed={false}/>
+            <Accordion titleValue={'Users'} collapsed={accordionCollapsed} onClick={() => setAccordionCollapsed(!accordionCollapsed)}/>
 
             <UncontrolledAccordion titleValue={'Menu'}/>
 
