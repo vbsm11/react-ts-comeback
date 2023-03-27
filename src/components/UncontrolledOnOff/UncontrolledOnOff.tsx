@@ -1,12 +1,17 @@
 import {useState} from 'react';
 
 
-export function UncontrolledOnOff() {
+type UncontrolledOnOffPropsType = {
+    onChange: (on: boolean) => void
+}
+
+export function UncontrolledOnOff(props: UncontrolledOnOffPropsType) {
     console.log('UncontrolledOnOff rendering')
     const [on, setOn] = useState<boolean>(false)
 
     const onOffFunc = () => {
         setOn(!on)
+        props.onChange(!on)
     }
 
     const onOffStyle = {

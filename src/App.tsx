@@ -31,9 +31,9 @@ function App() {
 
             <UncontrolledRating/>
 
-            <OnOff on={on} onClick={setOn}/>
+            {/*<OnOff on={on} onClick={setOn}/>*/}
 
-            <UncontrolledOnOff/>
+            <UncontrolledOnOff onChange={setOn}/> {on.toString()}
         </div>
     );
 }
