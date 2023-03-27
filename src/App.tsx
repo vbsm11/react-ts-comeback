@@ -19,7 +19,7 @@ function App() {
 
             <UncontrolledAccordion titleValue={'Menu'}/>
 
-            <Rating value={3}/>
+            {/*<Rating value={3}/>*/}
 
             <UncontrolledRating/>
 
