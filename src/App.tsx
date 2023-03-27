@@ -25,7 +25,7 @@ function App() {
 
             <Rating value={ratingValue} onClick={setRatingValue}/>
 
-            {/*<UncontrolledRating/>*/}
+            <UncontrolledRating/>
 
             <OnOff on={false}/>
 
