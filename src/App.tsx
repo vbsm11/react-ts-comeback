@@ -17,6 +17,8 @@ function App() {
 
     const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
 
+    const [on, setOn] = useState<boolean>(false)
+
 
     // обязана вернуть JSX
     return (
@@ -29,7 +31,7 @@ function App() {
 
             <UncontrolledRating/>
 
-            <OnOff on={false}/>
+            <OnOff on={on} onClick={setOn}/>
 
             <UncontrolledOnOff/>
         </div>

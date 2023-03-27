@@ -1,5 +1,6 @@
 type OnOffPropsType = {
     on: boolean
+    onClick: (on: boolean) => void
 }
 
 export function OnOff(props: OnOffPropsType) {
@@ -38,8 +39,8 @@ export function OnOff(props: OnOffPropsType) {
 
     return (
         <div style={onOffStyle}>
-            <div style={onStyle}>On</div>
-            <div style={offStyle}>Off</div>
+            <div style={onStyle} onClick={() => props.onClick(true)}>On</div>
+            <div style={offStyle} onClick={() => props.onClick(false)}>Off</div>
             <div style={indicatorStyle}></div>
         </div>
     )
