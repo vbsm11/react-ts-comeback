@@ -9,6 +9,7 @@ import {UncontrolledRating} from './components/UncontrolledRating/UncontrolledRa
 import {UncontrolledInput} from './Input/UncontrolledInput';
 import {ControlledInput} from './Input/ControlledInput';
 import {UncontrolledInputWithRef} from './Input/UncontrolledInputWithRef';
+import {ControlledCheckbox} from './Input/ControlledCheckbox';
 
 
 // function declaration
@@ -42,6 +43,7 @@ function App() {
             <UncontrolledInputWithRef/>
 
             <ControlledInput/>
+            <ControlledCheckbox/>
         </div>
     );
 }
