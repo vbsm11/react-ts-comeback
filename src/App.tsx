@@ -28,7 +28,17 @@ function App() {
     // обязана вернуть JSX
     return (
         <div className={'App'}>
-            {/*<Accordion titleValue={'Users'} collapsed={accordionCollapsed} onClick={() => setAccordionCollapsed(!accordionCollapsed)}/>*/}
+            <Accordion
+                titleValue={'Users'}
+                collapsed={accordionCollapsed}
+                onClick={() => setAccordionCollapsed(!accordionCollapsed)}
+                onItemClick={(v) => {alert(v.toString() + ' was clicked')}}
+                items={[
+                    {title: 'Alex', value: 1},
+                    {title: 'Sam', value: 2},
+                    {title: 'Dima', value: 3}
+                ]}
+            />
 
             {/*<UncontrolledAccordion titleValue={'Menu'}/>*/}
 
@@ -40,12 +50,12 @@ function App() {
 
             {/*<UncontrolledOnOff onChange={setOn}/> {on.toString()}*/}
 
-            <UncontrolledInput/>
-            <UncontrolledInputWithRef/>
+            {/*<UncontrolledInput/>*/}
+            {/*<UncontrolledInputWithRef/>*/}
 
-            <ControlledInput/>
-            <ControlledCheckbox/>
-            <ControlledSelect/>
+            {/*<ControlledInput/>*/}
+            {/*<ControlledCheckbox/>*/}
+            {/*<ControlledSelect/>*/}
         </div>
     );
 }
