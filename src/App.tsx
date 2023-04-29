@@ -6,6 +6,8 @@ import {OnOff} from './components/OnOff/OnOff';
 import {UncontrolledOnOff} from './components/UncontrolledOnOff/UncontrolledOnOff';
 import {UncontrolledAccordion} from './components/UncontrolledAccordion/UncontrolledAccordion';
 import {UncontrolledRating} from './components/UncontrolledRating/UncontrolledRating';
+import {UncontrolledInput} from './Input/UncontrolledInput';
+import {ControlledInput} from './Input/ControlledInput';
 
 
 // function declaration
@@ -23,17 +25,21 @@ function App() {
     // обязана вернуть JSX
     return (
         <div className={'App'}>
-            <Accordion titleValue={'Users'} collapsed={accordionCollapsed} onClick={() => setAccordionCollapsed(!accordionCollapsed)}/>
+            {/*<Accordion titleValue={'Users'} collapsed={accordionCollapsed} onClick={() => setAccordionCollapsed(!accordionCollapsed)}/>*/}
 
-            <UncontrolledAccordion titleValue={'Menu'}/>
+            {/*<UncontrolledAccordion titleValue={'Menu'}/>*/}
 
-            <Rating value={ratingValue} onClick={setRatingValue}/>
+            {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
 
-            <UncontrolledRating/>
+            {/*<UncontrolledRating/>*/}
 
-            {/*<OnOff on={on} onClick={setOn}/>*/}
+            {/*/!*<OnOff on={on} onClick={setOn}/>*!/*/}
 
-            <UncontrolledOnOff onChange={setOn}/> {on.toString()}
+            {/*<UncontrolledOnOff onChange={setOn}/> {on.toString()}*/}
+
+            <UncontrolledInput/>
+
+            <ControlledInput/>
         </div>
     );
 }
