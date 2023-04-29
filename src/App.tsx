@@ -10,6 +10,7 @@ import {UncontrolledInput} from './Input/UncontrolledInput';
 import {ControlledInput} from './Input/ControlledInput';
 import {UncontrolledInputWithRef} from './Input/UncontrolledInputWithRef';
 import {ControlledCheckbox} from './Input/ControlledCheckbox';
+import {ControlledSelect} from './Input/ControlledSelect';
 
 
 // function declaration
@@ -44,6 +45,7 @@ function App() {
 
             <ControlledInput/>
             <ControlledCheckbox/>
+            <ControlledSelect/>
         </div>
     );
 }
