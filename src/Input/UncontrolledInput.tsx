@@ -1,7 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 export const UncontrolledInput = () => {
+
+  const [value, setValue] = useState<string>('')
+
   return (
-      <input/>
-  )
+      <div>
+        <input onChange={(e) => setValue(e.currentTarget.value)}/> - {value}
+      </div>
+    )
 }

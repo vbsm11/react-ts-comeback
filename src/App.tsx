@@ -8,6 +8,7 @@ import {UncontrolledAccordion} from './components/UncontrolledAccordion/Uncontro
 import {UncontrolledRating} from './components/UncontrolledRating/UncontrolledRating';
 import {UncontrolledInput} from './Input/UncontrolledInput';
 import {ControlledInput} from './Input/ControlledInput';
+import {UncontrolledInputWithRef} from './Input/UncontrolledInputWithRef';
 
 
 // function declaration
@@ -38,6 +39,7 @@ function App() {
             {/*<UncontrolledOnOff onChange={setOn}/> {on.toString()}*/}
 
             <UncontrolledInput/>
+            <UncontrolledInputWithRef/>
 
             <ControlledInput/>
         </div>
