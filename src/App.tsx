@@ -11,7 +11,12 @@ import {ControlledInput} from './Input/ControlledInput';
 import {UncontrolledInputWithRef} from './Input/UncontrolledInputWithRef';
 import {ControlledCheckbox} from './Input/ControlledCheckbox';
 import {ControlledSelect} from './Input/ControlledSelect';
+import {CustomSelect} from './components/Select/CustomSelect';
 
+export type ItemType = {
+    title: string
+    value: any
+}
 
 // function declaration
 function App() {
@@ -20,25 +25,35 @@ function App() {
 
     const [ratingValue, setRatingValue] = useState<ValuesType>(3)
 
-    const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
-
     const [on, setOn] = useState<boolean>(false)
+
+    const items: ItemType[] = [
+        {title: 'Alex', value: 1},
+        {title: 'Sam', value: 2},
+        {title: 'Dima', value: 3},
+        {title: 'Masha', value: 4},
+        {title: 'Natasha', value: 5},
+    ]
+
+    const [collapsed, setCollapsed] = useState<boolean>(false)
+
+    const [selected, setSelected] = useState<ItemType>({title: 'Alex', value: 1})
 
 
     // обязана вернуть JSX
     return (
         <div className={'App'}>
-            <Accordion
-                titleValue={'Users'}
-                collapsed={accordionCollapsed}
-                onClick={() => setAccordionCollapsed(!accordionCollapsed)}
-                onItemClick={(v) => {alert(v.toString() + ' was clicked')}}
-                items={[
-                    {title: 'Alex', value: 1},
-                    {title: 'Sam', value: 2},
-                    {title: 'Dima', value: 3}
-                ]}
-            />
+            {/*<Accordion*/}
+            {/*    titleValue={'Users'}*/}
+            {/*    collapsed={collapsed}*/}
+            {/*    onClick={() => setCollapsed(!accordionCollapsed)}*/}
+            {/*    onItemClick={(v) => {alert(v.toString() + ' was clicked')}}*/}
+            {/*    items={[*/}
+            {/*        {title: 'Alex', value: 1},*/}
+            {/*        {title: 'Sam', value: 2},*/}
+            {/*        {title: 'Dima', value: 3}*/}
+            {/*    ]}*/}
+            {/*/>*/}
 
             {/*<UncontrolledAccordion titleValue={'Menu'}/>*/}
 
@@ -56,6 +71,14 @@ function App() {
             {/*<ControlledInput/>*/}
             {/*<ControlledCheckbox/>*/}
             {/*<ControlledSelect/>*/}
+
+            <CustomSelect
+                selected={selected}
+                collapsed={collapsed}
+                onCollapse={() => setCollapsed(!collapsed)}
+                onItemClick={setSelected}
+                items={items}
+            />
         </div>
     );
 }
