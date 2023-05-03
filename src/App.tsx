@@ -12,6 +12,7 @@ import {UncontrolledInputWithRef} from './Input/UncontrolledInputWithRef';
 import {ControlledCheckbox} from './Input/ControlledCheckbox';
 import {ControlledSelect} from './Input/ControlledSelect';
 import {CustomSelect} from './components/Select/CustomSelect';
+import {SuperCustomSelect} from './components/Select/SuperCustomSelect';
 
 export type ItemType = {
     title: string
@@ -73,6 +74,14 @@ function App() {
             {/*<ControlledSelect/>*/}
 
             <CustomSelect
+                selected={selected}
+                collapsed={collapsed}
+                onCollapse={() => setCollapsed(!collapsed)}
+                onItemClick={setSelected}
+                items={items}
+            />
+
+            <SuperCustomSelect
                 selected={selected}
                 collapsed={collapsed}
                 onCollapse={() => setCollapsed(!collapsed)}
