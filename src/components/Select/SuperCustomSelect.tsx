@@ -56,7 +56,7 @@ function ItemsForSelect(props: ItemsForSelectPropsType) {
                     props.onCollapse()
                 }
 
-                const classes = props.selected.value === i.value? styles.item + styles.selectedItem : styles.item
+                const classes = props.selected.value === i.value? `${styles.item} ${styles.selectedItem}`: styles.item
 
                 return (
                     <div
