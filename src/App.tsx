@@ -73,13 +73,13 @@ function App() {
             {/*<ControlledCheckbox/>*/}
             {/*<ControlledSelect/>*/}
 
-            <CustomSelect
-                selected={selected}
-                collapsed={collapsed}
-                onCollapse={() => setCollapsed(!collapsed)}
-                onItemClick={setSelected}
-                items={items}
-            />
+            {/*<CustomSelect*/}
+            {/*    selected={selected}*/}
+            {/*    collapsed={collapsed}*/}
+            {/*    onCollapse={() => setCollapsed(!collapsed)}*/}
+            {/*    onItemClick={setSelected}*/}
+            {/*    items={items}*/}
+            {/*/>*/}
 
             <SuperCustomSelect
                 selected={selected}
