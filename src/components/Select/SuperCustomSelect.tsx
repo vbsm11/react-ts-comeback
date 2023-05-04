@@ -13,7 +13,11 @@ type SuperCustomSelectPropsType = {
 
 export function SuperCustomSelect(props: SuperCustomSelectPropsType) {
     return (
-        <div className={styles.customSelect}>
+        <div
+            className={styles.customSelect}
+            tabIndex={0}
+            onBlur={props.onCollapse}
+        >
             <SelectedItem title={props.selected.title} onClick={props.onCollapse}/>
             {!props.collapsed && <ItemsForSelect selected={props.selected} items={props.items} onItemClick={props.onItemClick} onCollapse={props.onCollapse}/>}
         </div>
