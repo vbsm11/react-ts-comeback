@@ -36,7 +36,7 @@ function App() {
         {title: 'Natasha', value: 5},
     ]
 
-    const [collapsed, setCollapsed] = useState<boolean>(false)
+    const [collapsed, setCollapsed] = useState<boolean>(true)
 
     const [selected, setSelected] = useState<ItemType>({title: 'Alex', value: 1})
 

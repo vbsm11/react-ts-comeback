@@ -1,6 +1,6 @@
 import React from 'react';
 import {ItemType} from '../../App';
-import styles from 'CustomSelect.module.css'
+import styles from './CustomSelect.module.css'
 
 
 type SuperCustomSelectPropsType = {
