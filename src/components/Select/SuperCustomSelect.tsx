@@ -1,5 +1,7 @@
 import React from 'react';
 import {ItemType} from '../../App';
+import styles from 'CustomSelect.module.css'
+
 
 type SuperCustomSelectPropsType = {
     selected: ItemType
@@ -11,7 +13,7 @@ type SuperCustomSelectPropsType = {
 
 export function SuperCustomSelect(props: SuperCustomSelectPropsType) {
     return (
-        <div className={'customSelect'}>
+        <div className={styles.customSelect}>
             <SelectedItem title={props.selected.title} onClick={props.onCollapse}/>
             {!props.collapsed && <ItemsForSelect selected={props.selected} items={props.items} onItemClick={props.onItemClick} onCollapse={props.onCollapse}/>}
         </div>
@@ -27,7 +29,7 @@ function SelectedItem(props: SelectedItemPropsType) {
     return (
         <div
         onClick={props.onClick}
-        className={'selected'}
+        className={styles.selected}
     >
             {props.title + ` ->`}
         </div>
@@ -45,7 +47,7 @@ function ItemsForSelect(props: ItemsForSelectPropsType) {
 
     return (
         <div
-            className={'items'}
+            className={styles.items}
         >
             {props.items.map((i, index) => {
 
@@ -54,7 +56,7 @@ function ItemsForSelect(props: ItemsForSelectPropsType) {
                     props.onCollapse()
                 }
 
-                const classes = props.selected.value === i.value? 'item selectedItem' : 'item'
+                const classes = props.selected.value === i.value? styles.item + styles.selectedItem : styles.item
 
                 return (
                     <div
