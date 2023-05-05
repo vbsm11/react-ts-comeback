@@ -16,7 +16,7 @@ export function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
     return (
         <div>
             <AccordionTitle title={props.titleValue} setCollapsed={collapsedFunc}/>
-            {collapsed && <AccordionBody/>}
+            {!collapsed && <AccordionBody/>}
         </div>
     )
 }
