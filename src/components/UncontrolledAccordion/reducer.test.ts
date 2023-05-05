@@ -10,3 +10,12 @@ test('reducer must work correct', () => {
     expect(changedState).not.toBe(state)
     expect(changedState.collapsed).toBe(false)
 })
+
+test('reducer must throw an error', () => {
+    const state: StateType = {
+        collapsed: true
+    }
+
+    expect(reducer(state, {type: 'ERROR-TYPE'})).toThrowError()
+
+})

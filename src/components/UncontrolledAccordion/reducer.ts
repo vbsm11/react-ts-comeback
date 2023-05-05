@@ -11,6 +11,6 @@ export const reducer = (state: StateType, action: ActionType): StateType => {
         case 'TOGGLE-COLLAPSED':
             return {...state, collapsed: !state.collapsed}
         default:
-            return state
+            throw new Error()
     }
 }
