@@ -84,7 +84,7 @@ function App() {
             <SuperCustomSelect
                 selected={selected}
                 collapsed={collapsed}
-                onCollapse={() => setCollapsed(!collapsed)}
+                setCollapsed={setCollapsed}
                 onItemClick={setSelected}
                 items={items}
             />

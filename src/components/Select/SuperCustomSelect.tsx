@@ -6,20 +6,29 @@ import styles from './CustomSelect.module.css'
 type SuperCustomSelectPropsType = {
     selected: ItemType
     collapsed: boolean
-    onCollapse: () => void
+    setCollapsed: (collapsed: boolean) => void
     onItemClick: (item: ItemType) => void
     items: Array<ItemType>
 }
 
 export function SuperCustomSelect(props: SuperCustomSelectPropsType) {
+
+    const toggleCollapse = () => {
+        props.setCollapsed(!props.collapsed)
+    }
+
+    const setCollapsed = () => {
+        props.setCollapsed(true)
+    }
+
     return (
         <div
             className={styles.customSelect}
             tabIndex={0}
-            onBlur={props.onCollapse}
+            onBlur={setCollapsed}
         >
-            <SelectedItem title={props.selected.title} onClick={props.onCollapse}/>
-            {!props.collapsed && <ItemsForSelect selected={props.selected} items={props.items} onItemClick={props.onItemClick} onCollapse={props.onCollapse}/>}
+            <SelectedItem title={props.selected.title} onClick={toggleCollapse}/>
+            {!props.collapsed && <ItemsForSelect selected={props.selected} items={props.items} onItemClick={props.onItemClick} onCollapse={toggleCollapse}/>}
         </div>
     )
 }
