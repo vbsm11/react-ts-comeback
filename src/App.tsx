@@ -56,7 +56,7 @@ function App() {
             {/*    ]}*/}
             {/*/>*/}
 
-            {/*<UncontrolledAccordion titleValue={'Menu'}/>*/}
+            <UncontrolledAccordion titleValue={'Menu'}/>
 
             {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
 
