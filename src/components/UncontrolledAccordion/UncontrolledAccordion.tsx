@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useReducer} from 'react';
 
 type UncontrolledAccordionPropsType = {
     titleValue: string
@@ -10,16 +10,19 @@ type ActionType = {
 }
 
 const reducer = (state: boolean, action: ActionType) => {
-  return state
+  if (action.type === 'TOGGLE-COLLAPSED') {
+      return !state
+  }
+    return state
 }
 
 export function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
     console.log('UncontrolledAccordion rendering')
 
-    const [collapsed, setCollapsed] = useState<boolean>(true)
+    const [collapsed, dispatch] = useReducer(reducer, true)
 
     const collapsedFunc = () => {
-      setCollapsed(!collapsed)
+      dispatch({type: 'TOGGLE-COLLAPSED'})
     }
 
     return (
