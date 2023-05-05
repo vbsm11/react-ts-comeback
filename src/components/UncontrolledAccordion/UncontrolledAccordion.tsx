@@ -4,6 +4,15 @@ type UncontrolledAccordionPropsType = {
     titleValue: string
 }
 
+
+type ActionType = {
+    type: string
+}
+
+const reducer = (state: boolean, action: ActionType) => {
+  return state
+}
+
 export function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
     console.log('UncontrolledAccordion rendering')
 
