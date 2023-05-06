@@ -18,9 +18,15 @@ const Users = (props: {users: Array<string>}) => {
 const UsersWithMemo = React.memo(Users)
 
 export const Example1 = () => {
+  console.log('example')
+
   const [counter, setCounter] = useState(0)
 
   const [users, setUsers] = useState(['Alex', 'Masha', 'Pasha'])
+
+  const addUser = () => {
+    setUsers([...users, 'Sveta' + new Date().getTime()])
+  }
 
   return (
       <>
@@ -30,6 +36,11 @@ export const Example1 = () => {
           +
         </button>
         <NewMessagesCounter count={counter}/>
+        <button
+            onClick={addUser}
+        >
+          add user
+        </button>
         <UsersWithMemo users={users}/>
       </>
   )
