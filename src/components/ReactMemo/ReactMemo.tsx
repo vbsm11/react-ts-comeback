@@ -1,3 +1,5 @@
+import {useState} from 'react';
+
 const NewMessagesCounter = (props: any) => {
   return (
       <div>{props.count}</div>
@@ -13,10 +15,14 @@ const Users = (props: {users: Array<string>}) => {
 }
 
 export const Example1 = () => {
+  const [counter, setCounter] = useState(0)
+
+  const [users, setUsers] = useState(['Alex', 'Masha', 'Pasha'])
+
   return (
       <>
-        <NewMessagesCounter count={10}/>
-        <Users users={['Alex', 'Masha', 'Pasha']}/>
+        <NewMessagesCounter count={counter}/>
+        <Users users={users}/>
       </>
   )
 
