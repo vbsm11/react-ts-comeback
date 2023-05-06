@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 
 const NewMessagesCounter = (props: any) => {
   return (
@@ -7,12 +7,15 @@ const NewMessagesCounter = (props: any) => {
 }
 
 const Users = (props: {users: Array<string>}) => {
+  console.log('USERS')
   return (
       <div>
         {props.users.map((u, i) => <div key={i}>{u}</div>)}
       </div>
   )
 }
+
+const UsersWithMemo = React.memo(Users)
 
 export const Example1 = () => {
   const [counter, setCounter] = useState(0)
@@ -27,7 +30,7 @@ export const Example1 = () => {
           +
         </button>
         <NewMessagesCounter count={counter}/>
-        <Users users={users}/>
+        <UsersWithMemo users={users}/>
       </>
   )
 
