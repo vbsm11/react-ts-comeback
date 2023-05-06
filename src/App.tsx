@@ -13,6 +13,7 @@ import {ControlledCheckbox} from './components/Input/ControlledCheckbox';
 import {ControlledSelect} from './components/Input/ControlledSelect';
 import {CustomSelect} from './components/Select/CustomSelect';
 import {SuperCustomSelect} from './components/Select/SuperCustomSelect';
+import {Example1} from './components/ReactMemo/ReactMemo';
 
 export type ItemType = {
     title: string
@@ -56,7 +57,7 @@ function App() {
             {/*    ]}*/}
             {/*/>*/}
 
-            <UncontrolledAccordion titleValue={'Menu'}/>
+            {/*<UncontrolledAccordion titleValue={'Menu'}/>*/}
 
             {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
 
@@ -81,13 +82,15 @@ function App() {
             {/*    items={items}*/}
             {/*/>*/}
 
-            <SuperCustomSelect
-                selected={selected}
-                collapsed={collapsed}
-                setCollapsed={setCollapsed}
-                onItemClick={setSelected}
-                items={items}
-            />
+            {/*<SuperCustomSelect*/}
+            {/*    selected={selected}*/}
+            {/*    collapsed={collapsed}*/}
+            {/*    setCollapsed={setCollapsed}*/}
+            {/*    onItemClick={setSelected}*/}
+            {/*    items={items}*/}
+            {/*/>*/}
+
+            <Example1/>
         </div>
     );
 }
