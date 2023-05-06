@@ -21,6 +21,11 @@ export const Example1 = () => {
 
   return (
       <>
+        <button
+            onClick={() => {setCounter(counter+1)}}
+        >
+          +
+        </button>
         <NewMessagesCounter count={counter}/>
         <Users users={users}/>
       </>
