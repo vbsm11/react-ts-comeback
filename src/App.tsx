@@ -6,11 +6,11 @@ import {OnOff} from './components/OnOff/OnOff';
 import {UncontrolledOnOff} from './components/UncontrolledOnOff/UncontrolledOnOff';
 import {UncontrolledAccordion} from './components/UncontrolledAccordion/UncontrolledAccordion';
 import {UncontrolledRating} from './components/UncontrolledRating/UncontrolledRating';
-import {UncontrolledInput} from './Input/UncontrolledInput';
-import {ControlledInput} from './Input/ControlledInput';
-import {UncontrolledInputWithRef} from './Input/UncontrolledInputWithRef';
-import {ControlledCheckbox} from './Input/ControlledCheckbox';
-import {ControlledSelect} from './Input/ControlledSelect';
+import {UncontrolledInput} from './components/Input/UncontrolledInput';
+import {ControlledInput} from './components/Input/ControlledInput';
+import {UncontrolledInputWithRef} from './components/Input/UncontrolledInputWithRef';
+import {ControlledCheckbox} from './components/Input/ControlledCheckbox';
+import {ControlledSelect} from './components/Input/ControlledSelect';
 import {CustomSelect} from './components/Select/CustomSelect';
 import {SuperCustomSelect} from './components/Select/SuperCustomSelect';
 
