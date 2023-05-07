@@ -14,7 +14,7 @@ import {ControlledSelect} from './components/Input/ControlledSelect';
 import {CustomSelect} from './components/Select/CustomSelect';
 import {SuperCustomSelect} from './components/Select/SuperCustomSelect';
 import {Example1} from './components/ReactMemo/ReactMemo';
-import {UseMemo} from './components/UseMemo/UseMemo';
+import {UseMemoHW} from './components/UseMemo/UseMemoHW';
 import {UseMemoWithReactMemo} from './components/UseMemo/UseMemoWithReactMemo';
 
 export type ItemType = {
@@ -84,7 +84,7 @@ function App() {
             {/*    items={items}*/}
             {/*/>*/}
 
-            {/*<SuperCustomSelect*/}
+            {/*<CustomSelectWithMemo*/}
             {/*    selected={selected}*/}
             {/*    collapsed={collapsed}*/}
             {/*    setCollapsed={setCollapsed}*/}
@@ -97,6 +97,8 @@ function App() {
             {/*<UseMemo/>*/}
 
             <UseMemoWithReactMemo/>
+
+            <UseMemoHW/>
         </div>
     );
 }
