@@ -15,6 +15,7 @@ import {CustomSelect} from './components/Select/CustomSelect';
 import {SuperCustomSelect} from './components/Select/SuperCustomSelect';
 import {Example1} from './components/ReactMemo/ReactMemo';
 import {UseMemo} from './components/UseMemo/UseMemo';
+import {UseMemoWithReactMemo} from './components/UseMemo/UseMemoWithReactMemo';
 
 export type ItemType = {
     title: string
@@ -93,7 +94,9 @@ function App() {
 
             {/*<Example1/>*/}
 
-            <UseMemo/>
+            {/*<UseMemo/>*/}
+
+            <UseMemoWithReactMemo/>
         </div>
     );
 }
