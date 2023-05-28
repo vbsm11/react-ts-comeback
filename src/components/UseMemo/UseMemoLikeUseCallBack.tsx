@@ -12,12 +12,15 @@ export const UseMemoLikeUseCallback = () => {
         setBooks([...books, 'SCSS' + new Date().getTime()])
     }, [books])
 
+    const memoizedAddBook2 = useCallback(() => {
+        setBooks([...books, 'SCSS' + new Date().getTime()])
+    }, [books])
 
     return (
         <>
             <button onClick={() => {setCounter(counter+1)}}>+</button>
             {counter}
-            <BooksWithMemo addBook={memoizedAddBook}/>
+            <BooksWithMemo addBook={memoizedAddBook2}/>
         </>
     )
 }
