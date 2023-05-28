@@ -16,6 +16,7 @@ import {SuperCustomSelect} from './components/Select/SuperCustomSelect';
 import {Example1} from './components/ReactMemo/ReactMemo';
 import {UseMemoHW} from './components/UseMemo/UseMemoHW';
 import {UseMemoWithReactMemo} from './components/UseMemo/UseMemoWithReactMemo';
+import {UseMemoLikeUseCallback} from './components/UseMemo/UseMemoLikeUseCallBack';
 
 export type ItemType = {
     title: string
@@ -25,7 +26,6 @@ export type ItemType = {
 // function declaration
 function App() {
     // что-то полезное
-    console.log('App rendering')
 
     const [ratingValue, setRatingValue] = useState<ValuesType>(3)
 
@@ -96,9 +96,11 @@ function App() {
 
             {/*<UseMemo/>*/}
 
-            <UseMemoWithReactMemo/>
+            {/*<UseMemoWithReactMemo/>*/}
 
-            <UseMemoHW/>
+            {/*<UseMemoHW/>*/}
+
+            <UseMemoLikeUseCallback/>
         </div>
     );
 }
