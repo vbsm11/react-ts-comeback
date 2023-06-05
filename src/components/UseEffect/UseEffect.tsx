@@ -25,7 +25,7 @@ export const UseEffect = () => {
 
     return (
         <>
-            Hello {counter}
+            Hello {fake}, {counter}
             <button onClick={() => {
                 setFake(fake + 1)
             }}>fake +
