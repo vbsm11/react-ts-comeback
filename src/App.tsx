@@ -20,6 +20,7 @@ import {UseMemoLikeUseCallback} from './components/UseMemo/UseMemoLikeUseCallBac
 import {UseState} from './components/UseState/UseState';
 import {UseEffect} from './components/UseEffect/UseEffect';
 import {UseEffectWithSetTimeOut} from './components/UseEffect/UseEffectWithSetTimeOut';
+import {UseEffectWithSetInterval} from './components/UseEffect/UseEffectWithSetInterval';
 
 export type ItemType = {
     title: string
@@ -109,7 +110,9 @@ function App() {
 
             {/*<UseEffect/>*/}
 
-            <UseEffectWithSetTimeOut/>
+            {/*<UseEffectWithSetTimeOut/>*/}
+
+            <UseEffectWithSetInterval/>
         </div>
     );
 }
