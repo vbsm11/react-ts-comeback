@@ -18,6 +18,7 @@ import {UseMemoHW} from './components/UseMemo/UseMemoHW';
 import {UseMemoWithReactMemo} from './components/UseMemo/UseMemoWithReactMemo';
 import {UseMemoLikeUseCallback} from './components/UseMemo/UseMemoLikeUseCallBack';
 import {UseState} from './components/UseState/UseState';
+import {UseEffect} from './components/UseEffect/UseEffect';
 
 export type ItemType = {
     title: string
@@ -103,7 +104,9 @@ function App() {
 
             {/*<UseMemoLikeUseCallback/>*/}
 
-            <UseState/>
+            {/*<UseState/>*/}
+
+            <UseEffect/>
         </div>
     );
 }
