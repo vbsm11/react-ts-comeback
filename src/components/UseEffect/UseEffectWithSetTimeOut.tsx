@@ -3,25 +3,15 @@ import React, {useEffect, useState} from 'react';
 
 export const UseEffectWithSetTimeOut = () => {
 
-    console.log('UseEffect Component')
+    console.log('SetTimeOut Example')
 
     const [fake, setFake] = useState(1)
     const [counter, setCounter] = useState(1)
 
-    useEffect(() => {
-        console.log('UseEffect every render')
-        document.title = counter.toString()
-    })
-
-    useEffect(() => {
-        console.log('UseEffect only first render (componentDidMount)')
-        document.title = counter.toString()
-    }, [])
-
-    useEffect(() => {
-        console.log('UseEffect first render and every counter change')
-        document.title = counter.toString()
-    }, [counter])
+    setTimeout(() => {
+        console.log('setTimeout')
+        document.title = (counter.toString())
+    }, 1000)
 
     return (
         <>
