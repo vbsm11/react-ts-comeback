@@ -19,6 +19,7 @@ import {UseMemoWithReactMemo} from './components/UseMemo/UseMemoWithReactMemo';
 import {UseMemoLikeUseCallback} from './components/UseMemo/UseMemoLikeUseCallBack';
 import {UseState} from './components/UseState/UseState';
 import {UseEffect} from './components/UseEffect/UseEffect';
+import {UseEffectWithSetTimeOut} from './components/UseEffect/UseEffectWithSetTimeOut';
 
 export type ItemType = {
     title: string
@@ -106,7 +107,9 @@ function App() {
 
             {/*<UseState/>*/}
 
-            <UseEffect/>
+            {/*<UseEffect/>*/}
+
+            <UseEffectWithSetTimeOut/>
         </div>
     );
 }
