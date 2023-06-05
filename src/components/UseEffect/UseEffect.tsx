@@ -9,7 +9,8 @@ export const UseEffect = () => {
 
     useEffect(() => {
         console.log('UseEffect')
-        // document.title = ''
+        debugger
+        document.title = counter.toString()
         // api.getUsers().then('')
         // setInterval
         // indexedDB
