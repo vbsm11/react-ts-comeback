@@ -9,9 +9,9 @@ const generateData = (): number => {
 export const UseState = () => {
     console.log('UseState')
 
-    const initValue = useMemo(generateData, [])
+    // const initValue = useMemo(generateData, [])
 
-    const [counter, setCounter] = useState<number>(initValue)
+    const [counter, setCounter] = useState<number>(generateData)
 
     return (
         <>
