@@ -9,22 +9,30 @@ export const UseEffect = () => {
     const [counter, setCounter] = useState(1)
 
     useEffect(() => {
-        console.log('UseEffect')
-        debugger
+        console.log('UseEffect every render')
         document.title = counter.toString()
-        // api.getUsers().then('')
-        // setInterval
-        // indexedDB
-        // document.getElementById()
+    })
+
+    useEffect(() => {
+        console.log('UseEffect only first render (componentDidMount)')
+        document.title = counter.toString()
+    }, [])
+
+    useEffect(() => {
+        console.log('UseEffect first render and every counter change')
+        document.title = counter.toString()
     }, [counter])
 
     return (
         <>
             Hello {counter}
             <button onClick={() => {
-                // setCounter(counter + 1)
                 setFake(fake + 1)
-            }}>+
+            }}>fake +
+            </button>
+            <button onClick={() => {
+                setCounter(counter + 1)
+            }}>counter +
             </button>
         </>
     )
