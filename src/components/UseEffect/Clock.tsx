@@ -1,45 +1,20 @@
 import React, {useEffect, useState} from 'react';
 
-type ClockObjectType = {
-    hours: number
-    minutes: number
-    seconds: number
-}
-
-const init = (): ClockObjectType => {
-    const a = new Date()
-    return {
-        hours: a.getHours(),
-        minutes: a.getMinutes(),
-        seconds: a.getSeconds()
-    }
-}
 
 export const Clock = () => {
 
-
-    const [clock, setClock] = useState(init)
-
-    const setter = () => {
-        const a = new Date()
-        return {
-            hours: a.getHours(),
-            minutes: a.getMinutes(),
-            seconds: a.getSeconds()
-        }
-    }
-
+    const [clock, setClock] = useState(new Date())
 
     useEffect(() => {
         setInterval(() => {
-            setClock(setter)
+            setClock(new Date())
         }, 1000)
+    }, [])
 
-    })
 
     return (
         <>
-            {clock.hours}: {clock.minutes}: {clock.seconds}
+            {clock.getHours()}: {clock.getMinutes()}: {clock.getSeconds()}
         </>
     )
 }
