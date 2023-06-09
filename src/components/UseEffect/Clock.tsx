@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
+const add0 = (time: number) => time < 10? '0' + time: time
 
 export const Clock = () => {
 
@@ -12,9 +13,13 @@ export const Clock = () => {
     }, [])
 
 
+    const hours = add0(clock.getHours())
+    const minutes = add0(clock.getMinutes())
+    const seconds = add0(clock.getSeconds())
+
     return (
         <>
-            {clock.getHours()}: {clock.getMinutes()}: {clock.getSeconds()}
+            {hours}: {minutes}: {seconds}
         </>
     )
 }
