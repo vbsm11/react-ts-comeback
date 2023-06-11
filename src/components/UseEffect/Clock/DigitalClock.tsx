@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './Clock.module.css';
 import {ClockModePropsType} from './Clock';
+
 const add0 = (time: number) => time < 10 ? '0' + time : time
 
 export const DigitalClock: React.FC<ClockModePropsType> = ({clock}) => {
