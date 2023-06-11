@@ -10,11 +10,14 @@ export const UseEffectWithSetTimeOut = () => {
 
     useEffect(() => {
 
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             console.log('setTimeout')
             document.title = (counter.toString())
-        }, 1000)
+        }, 3000)
 
+        return () => {
+            clearTimeout(timeout)
+        }
     }, [counter])
 
     return (
