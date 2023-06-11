@@ -22,6 +22,7 @@ import {UseEffect} from './components/UseEffect/UseEffect';
 import {UseEffectWithSetTimeOut} from './components/UseEffect/UseEffectWithSetTimeOut';
 import {UseEffectWithSetInterval} from './components/UseEffect/UseEffectWithSetInterval';
 import {Clock} from './components/UseEffect/Clock/Clock';
+import {ResetEffectExample} from './components/UseEffect/ResetEffectExample';
 
 export type ItemType = {
     title: string
@@ -115,7 +116,9 @@ function App() {
 
             {/*<UseEffectWithSetInterval/>*/}
 
-            <Clock/>
+            {/*<Clock/>*/}
+
+            <ResetEffectExample/>
         </div>
     );
 }
