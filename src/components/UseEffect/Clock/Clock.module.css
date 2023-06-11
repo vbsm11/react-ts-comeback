@@ -1,0 +1,57 @@
+.analog {
+    position: relative;
+    height: 160px;
+    width: 160px;
+    border: 2px solid black;
+    border-radius: 80px;
+}
+
+.handParent {
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 150px;
+}
+
+.hourHand {
+    width: 2px;
+}
+
+.minuteHand {
+    width: 1.5px;
+}
+
+.secondHand {
+    width: 1px;
+}
+
+.handChild {
+    margin-bottom: 75px;
+    height: 75px;
+}
+
+.hourHandChild {
+    background-color: black;
+}
+
+.minuteHandChild {
+    background-color: red;
+}
+
+.secondHandChild {
+    background-color: grey;
+}
+
+.digital {
+    font-size: 230%;
+}
+
+.button {
+    width: 160px;
+    height: 50px;
+    margin-top: 8px;
+    font-size: 130%;
+}
