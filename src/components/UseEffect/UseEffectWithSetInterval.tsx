@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {clearInterval} from 'timers';
 
 
 export const UseEffectWithSetInterval = () => {
@@ -9,11 +10,14 @@ export const UseEffectWithSetInterval = () => {
 
     useEffect(() => {
 
-        setInterval(() => {
+        const interval = setInterval(() => {
             console.log('tick ' + counter)
             setCounter(state => state + 1)
         }, 1000)
 
+        return () => {
+            clearInterval(interval)
+        }
     }, [])
 
     return (
