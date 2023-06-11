@@ -13,7 +13,7 @@ export const ResetEffectExample = () => {
         return () => {
             console.log('reset effect ' + counter) // 1
         }
-    })
+    }, [counter])
 
     return (
         <>
@@ -22,3 +22,4 @@ export const ResetEffectExample = () => {
         </>
     )
 }
+
